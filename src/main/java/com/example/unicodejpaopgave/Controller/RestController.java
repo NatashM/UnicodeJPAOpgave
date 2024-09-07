@@ -14,7 +14,7 @@ public class RestController {
     @GetMapping("/unicode/{i}")
     public String unicodeToChar(@PathVariable int i){
         char c = (char)i;
-        return "unicode" + i + "char=" + c;
+        return "Unicode " + i + "Char " + c;
     }
 
 
@@ -24,17 +24,17 @@ public class RestController {
         return "char " + c + "unicode: " + unicode;
 }
 
-    @GetMapping("/sequence")
-    public List<Character> getCharacterSequence(
+    @GetMapping("/order")
+    public List<Character> getCharacterOrder(
             @RequestParam char startChar,
             @RequestParam int count) {
-        List<Character> characters = new ArrayList<>();
+        List<Character> letters = new ArrayList<>();
 
         for (int i = 0; i < count; i++) {
-            characters.add((char) (startChar + i));
+            letters.add((char) (startChar + i));
         }
 
-        return characters;
+        return letters;
     }
 
 }

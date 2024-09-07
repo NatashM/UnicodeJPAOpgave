@@ -24,7 +24,7 @@ public class InitData implements CommandLineRunner {
             unicode.setUnicode((int) character);
             unicode.setLetter(character);
             unicode.setName("Letter " + character);
-            unicode.setDescription("Description of " + character);
+            unicode.setDescription("Description..." + character);
 
             uniCodeRepository.save(unicode);
         }
